@@ -1,51 +1,44 @@
-const togglebar=document.getElementById('togglebar');
-let toggle=false;
-togglebar.addEventListener('click',()=>{
-    if (!toggle){
-        togglebar.classList.add('active');
-        document.querySelector('.listItems').classList.add('active');
-        toggle=true;
-    }
-    else{
-        togglebar.classList.remove('active');
-        document.querySelector('.listItems').classList.remove('active');
-        toggle=false;
-    }
-});
+// Navigation toggle
+const togglebar = document.getElementById('togglebar');
+const navList = document.querySelector('.navbarListItems .listItems');
 
-const listItems=document.querySelectorAll('.listItem');
-listItems.forEach(items=>{
-    items.addEventListener('click',()=>{
-        togglebar.classList.remove('active');
-        document.querySelector('.listItems').classList.remove('active');
-        toggle=false;
-    })
-});
-
-const ProjectImg=document.querySelectorAll('.ProjectImg');
-ProjectImg.forEach(item=>{
-    item.addEventListener('mouseenter',()=>{
-        item.querySelector('.projectLink').style.display='block';
-        item.querySelector('.prj-img').style.filter= "brightness(30%)";
-        item.querySelector('.prj-img').style.transform= "scale(0.9)";
-        item.querySelector('.prj-img').style.transition=" .3s linear";
+if (togglebar && navList) {
+    togglebar.addEventListener('click', () => {
+        togglebar.classList.toggle('active');
+        navList.classList.toggle('active');
     });
-    item.addEventListener('mouseleave',()=>{
-        item.querySelector('.projectLink').style.display='none';
-        item.querySelector('.prj-img').style.filter= "brightness(100%)";
-        item.querySelector('.prj-img').style.transform= "none";
-    });
-});
 
-const certficateCard=document.querySelectorAll('.certficateCard');
-certficateCard.forEach(item=>{
-    item.addEventListener('mouseenter',()=>{
-        item.querySelector('.certifcateContent').style.display='block';
-        item.querySelector('.certficateImg').style.filter='brightness(40%)';
+    // Close menu when a nav item is clicked (mobile)
+    const navLinks = document.querySelectorAll('.listItem a');
+    console.log(navLinks)
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            togglebar.classList.remove('active');
+            navList.classList.remove('active');
+        });
     });
-    item.addEventListener('mouseleave',()=>{
-        item.querySelector('.certifcateContent').style.display='none';
-        item.querySelector('.certficateImg').style.filter='brightness(100%)';
+}
 
+// Project hover: now handled via pure CSS (see style.css)
+
+/**
+ * Certificate hover – show overlay and dim image
+ */
+const certificateCards = document.querySelectorAll('.certficateCard');
+
+certificateCards.forEach(card => {
+    const content = card.querySelector('.certifcateContent');
+    const imageWrapper = card.querySelector('.certficateImg');
+
+    if (!content || !imageWrapper) return;
+
+    card.addEventListener('mouseenter', () => {
+        content.style.display = 'block';
+        imageWrapper.style.filter = 'brightness(40%)';
+    });
+
+    card.addEventListener('mouseleave', () => {
+        content.style.display = 'none';
+        imageWrapper.style.filter = 'brightness(100%)';
     });
 });
