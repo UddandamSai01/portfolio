@@ -10,7 +10,6 @@ if (togglebar && navList) {
 
     // Close menu when a nav item is clicked (mobile)
     const navLinks = document.querySelectorAll('.listItem a');
-    console.log(navLinks)
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             togglebar.classList.remove('active');
@@ -24,11 +23,11 @@ if (togglebar && navList) {
 /**
  * Certificate hover – show overlay and dim image
  */
-const certificateCards = document.querySelectorAll('.certficateCard');
+const certificateCards = document.querySelectorAll('.certificateCard');
 
 certificateCards.forEach(card => {
-    const content = card.querySelector('.certifcateContent');
-    const imageWrapper = card.querySelector('.certficateImg');
+    const content = card.querySelector('.certificateContent');
+    const imageWrapper = card.querySelector('.certificateImg');
 
     if (!content || !imageWrapper) return;
 

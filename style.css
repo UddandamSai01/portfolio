@@ -162,23 +162,23 @@ header {
     100% { transform: scale(0); }
 }
 
-.intoPara {
+.introPara {
     text-align: left;
     max-width: 600px;
 }
 
-.intoPara p {
+.introPara p {
     margin-bottom: 10px;
     color: #a2a2a2;
 }
 
-.intoPara p span {
+.introPara p span {
     color: white;
     font-size: clamp(2rem, 4vw, 3rem);
     padding-right: 10px;
 }
 
-.intoPara p .name {
+.introPara p .name {
     background-image: linear-gradient(205deg, #4610ea, #ff00ae);
     padding-right: 0;
     background-clip: text;
@@ -186,7 +186,7 @@ header {
     font-weight: bolder;
 }
 
-.intoPara .PFSD {
+.introPara .PFSD {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
@@ -374,7 +374,7 @@ h1::after {
 }
 
 .projectCard,
-.certficateCard {
+.certificateCard  {
     width: 100%;
     box-shadow: 0 0 10px white;
     border-radius: 8px;
@@ -432,7 +432,7 @@ h1::after {
     font-size: 24px;
 }
 
-.descripiton {
+.description  {
     color: #d1cece;
     font-size: 14px;
     text-align: justify;
@@ -625,7 +625,7 @@ h1::after {
 }
 
 /* --- Certificate section --- */
-.certficateCard {
+.certificateCard  {
     position: relative;
     display: flex;
     justify-content: center;
@@ -634,17 +634,17 @@ h1::after {
     overflow: hidden;
 }
 
-.certficateCard:hover {
+.certificateCard:hover {
     transform: translateY(-5px);
 }
 
-.certficateImg img {
+.certificateImg  img {
     height: 100%;
     width: 100%;
     transition: .3s ease;
 }
 
-.certifcateContent {
+.certificateContent  {
     display: none;
     width: 50%;
     position: absolute;
@@ -655,19 +655,19 @@ h1::after {
     text-align: center;
 }
 
-.certifcateContent h3 {
+.certificateContent  h3 {
     color: white;
     margin: 10px;
     font-size: 25px;
 }
 
-.certifcateContent p {
+.certificateContent  p {
     color: white;
     margin-top: 20px;
     font-weight: 400;
 }
 
-.certifcateContent button {
+.certificateContent  button {
     text-align: center;
     padding: 8px;
     font-size: 18px;
@@ -680,17 +680,17 @@ h1::after {
     margin-top: 20px;
 }
 
-.certficateCard button a {
+.certificateCard  button a {
     color: white;
     font-weight: 550;
 }
 
 /* Fixed invalid nested CSS here too */
-.certifcateContent button:hover {
+.certificateContent  button:hover {
     background-color: white;
 }
 
-.certifcateContent button:hover a {
+.certificateContent  button:hover a {
     color: rgb(58, 4, 255);
 }
 
@@ -867,7 +867,7 @@ form button:hover {
         gap: 50px;
     }
 
-    .intoPara {
+    .introPara {
         text-align: center;
         margin: 0 auto;
     }
@@ -931,7 +931,7 @@ form button:hover {
         font-size: 20px;
     }
 
-    .descripiton {
+    .description  {
         font-size: 13px;
     }
 
@@ -958,11 +958,11 @@ form button:hover {
         height: 30px;
     }
 
-    .certifcateContent h3 {
+    .certificateContent  h3 {
         font-size: 20px;
     }
 
-    .certficateCard button {
+    .certificateCard  button {
         padding: 3px;
     }
 
