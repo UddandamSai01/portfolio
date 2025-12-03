@@ -442,6 +442,7 @@ h1::after {
 .techUsed {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     gap: 10px;
     padding: 0 20px 10px 20px;
 }
@@ -449,7 +450,7 @@ h1::after {
 .techUsed span {
     color: white;
     border: 1px solid white;
-    padding: 5px 10px;
+    padding:5px 10px;
     font-size: 15px;
     border-radius: 15px;
     transition: .3s ease;
